@@ -1,0 +1,254 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69": {
+          "type": "sku",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "0dc236d2-dc4b-4778-a5ed-328f1cc69e57": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_single": false,
+            "select_first_variant": true,
+            "variant_style": "listed",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_backorder_text": false,
+            "show_pickup_availability": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": false,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": true
+          }
+        },
+        "8ee0d56e-845e-4255-96ed-5dffc797b262": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329": {
+          "type": "link",
+          "settings": {
+            "url": "{{ product.metafields.custom.instructions_url.value }}",
+            "open_in_new_tab": true,
+            "text": "Instructions",
+            "style": "secondary",
+            "show_in_quickbuy": false
+          }
+        },
+        "672e9b2f-96d6-426e-a69d-eed15f90a7ee": {
+          "type": "link",
+          "settings": {
+            "url": "{{ product.metafields.custom.spare_parts_url.value }}",
+            "open_in_new_tab": true,
+            "text": "Spare Parts",
+            "style": "primary",
+            "show_in_quickbuy": false
+          }
+        },
+        "b6d42500-81ec-42b4-a65f-e2aeec1195da": {
+          "type": "accordion",
+          "settings": {
+            "title": "{{ product.metafields.custom.collapsible_tab_1_title.value }}",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.collapsible_tab_1_copy | metafield_tag }}<\/p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "4ff2695e-2331-4163-bf02-b005628a558e": {
+          "type": "accordion",
+          "settings": {
+            "title": "{{ product.metafields.custom.collapsible_tab_2_title.value }}",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.collapsible_tab_2_copy | metafield_tag }}<\/p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "1027b487-b686-426a-93bb-7b5dcf10066c": {
+          "type": "accordion",
+          "settings": {
+            "title": "Proposition 65",
+            "icon": "",
+            "content": "<p><strong>Warning:<\/strong> This product may expose you to chemicals including Nickel, which are known to the State of California to cause cancer, birth defects or other reproductive harm. <a href=\"http:\/\/www.p65warnings.ca.gov\/\" target=\"_blank\">www.P65Warnings.ca.gov<\/a><\/p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "1c391125-a8e4-49ae-9805-2eb5746909d4": {
+          "type": "accordion",
+          "settings": {
+            "title": "Warranty & Returns",
+            "icon": "",
+            "content": "<p><strong>Warranty<\/strong><br\/>We offer a Limited Lifetime Warranty on casting, two years on machined or threaded parts and one year warranty on hydraulic components.<\/p><p><a href=\"https:\/\/themedevnontigertool.myshopify.com\/pages\/warranty-and-limit-of-liability\" target=\"_blank\">Our full Warranty Policy<\/a><br\/><br\/><strong>Returns<\/strong><br\/>We offer a 60 day money back guarantee should you feel as though the tool is not the right tool for you. Just be sure it's in unused condition and in original packaging.<br\/><br\/><a href=\"https:\/\/themedevnontigertool.myshopify.com\/pages\/warranty-returns\" target=\"_blank\" title=\"Warranty & Returns\">Start a Warranty & Return Process<\/a><\/p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        }
+      },
+      "block_order": [
+        "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69",
+        "title",
+        "0dc236d2-dc4b-4778-a5ed-328f1cc69e57",
+        "price",
+        "divider",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "8ee0d56e-845e-4255-96ed-5dffc797b262",
+        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",
+        "672e9b2f-96d6-426e-a69d-eed15f90a7ee",
+        "b6d42500-81ec-42b4-a65f-e2aeec1195da",
+        "4ff2695e-2331-4163-bf02-b005628a558e",
+        "1027b487-b686-426a-93bb-7b5dcf10066c",
+        "1c391125-a8e4-49ae-9805-2eb5746909d4"
+      ],
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": false,
+        "enable_sticky_columns": true,
+        "gallery_size": "large",
+        "gallery_layout": "collage-2",
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "166302319412179ff7": {
+      "type": "image-with-text",
+      "settings": {
+        "image_width": 700,
+        "subheading": "",
+        "title": "Why Tiger Tool?",
+        "use_h1": false,
+        "text": "<p>People identify Tiger Tool as a leader in the development of Heavy-Duty Suspension and Driveline tools, but really, this only scratches the surface of our identity. <\/p>",
+        "button_label": "Read more",
+        "button_link": "",
+        "button_style": "primary",
+        "image_position": "left",
+        "text_alignment": "left",
+        "use_alt_bg": false
+      }
+    },
+    "1663023411b91ba21c": {
+      "type": "logo-list",
+      "blocks": {
+        "1accf9b1-ffa0-4684-85af-e12b8c80911e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "340c24ea-a178-4172-b626-fa55d571d4c8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8_f51a709b-0e43-4527-8208-e949b5dc54cf.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "901a64eb-e1b3-445f-bc9a-0de8528f59e7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8_ff4d360f-30d1-45dc-9afd-d06505219d83.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "1accf9b1-ffa0-4684-85af-e12b8c80911e",
+        "340c24ea-a178-4172-b626-fa55d571d4c8",
+        "901a64eb-e1b3-445f-bc9a-0de8528f59e7"
+      ],
+      "settings": {
+        "title": "",
+        "image_opacity": 85,
+        "use_alt_bg": false
+      }
+    },
+    "16631765868a09e66b": {
+      "type": "product-template-product-list",
+      "settings": {
+        "title": "Related Tools you'll like.",
+        "product_list": "{{ product.metafields.custom.product_list_1.value }}",
+        "hide_if_empty": true,
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "use_alt_bg": true,
+        "full_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like",
+        "show_vendor": false,
+        "grid": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166302319412179ff7",
+    "1663023411b91ba21c",
+    "16631765868a09e66b",
+    "recommendations"
+  ]
+}

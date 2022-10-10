@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "16626714513224f2e8": {
+      "type": "background-video",
+      "settings": {
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "subheading": "Tell your story",
+        "title": "Background video",
+        "title_size": 84,
+        "title_size_mobile": 32,
+        "use_h1": false,
+        "text": "<p>Use a video to get a customer's attention<\/p>",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "full_width": true,
+        "overlay_style": "shadow"
+      }
+    },
+    "1663880803e421d39a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "all-tools",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true,
+        "full_width": true
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "blocks": {
+        "364f7af7-ab81-4e22-bc04-50f37e77cc0b": {
+          "type": "image",
+          "settings": {
+            "collection": "automotive",
+            "image": "shopify:\/\/shop_images\/Menu_Mega_Image1.jpg"
+          }
+        },
+        "8b61c757-98e1-44c6-8b28-7d430f2e1885": {
+          "type": "image",
+          "settings": {
+            "collection": "commercial"
+          }
+        },
+        "cb7ac36e-127c-4c76-8900-8bf5568f2d81": {
+          "type": "image",
+          "settings": {
+            "collection": "mining"
+          }
+        },
+        "2f96ae03-04ed-4744-8863-426ce905a4ea": {
+          "type": "image",
+          "settings": {
+            "collection": "automotive"
+          }
+        }
+      },
+      "block_order": [
+        "364f7af7-ab81-4e22-bc04-50f37e77cc0b",
+        "8b61c757-98e1-44c6-8b28-7d430f2e1885",
+        "cb7ac36e-127c-4c76-8900-8bf5568f2d81",
+        "2f96ae03-04ed-4744-8863-426ce905a4ea"
+      ],
+      "settings": {
+        "title": "Our collections",
+        "display_type": "selected",
+        "grid": 2
+      }
+    }
+  },
+  "order": [
+    "16626714513224f2e8",
+    "1663880803e421d39a",
+    "main"
+  ]
+}

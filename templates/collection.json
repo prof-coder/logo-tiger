@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_image_behind_heading": true,
+        "heading_image_height": "small",
+        "overlay_style": "full",
+        "coll_num_per_page_int": 16,
+        "grid": 3,
+        "show_vendor": false,
+        "show_total": false,
+        "coll_desc_pos": "above",
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "none",
+        "show_filter_counts": true,
+        "show_disabled_filters": false,
+        "ajax_products": true,
+        "enable_sticky_filter": true,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": true,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu",
+        "subcoll_style": "buttons",
+        "subcoll_gall_shape": "sq",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "shadow",
+        "subcoll_gall_text_alignment": "center center",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    },
+    "1662673742bf38d6b1": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "d97cee42-ef14-42a3-ad6d-656aa1506e3a": {
+          "type": "sku",
+          "settings": {
+          }
+        },
+        "1662673742cdd52fff-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1662673742cdd52fff-1": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "1662673742cdd52fff-3": {
+          "type": "divider",
+          "settings": {
+          }
+        },
+        "1662673742cdd52fff-4": {
+          "type": "variant_picker",
+          "settings": {
+            "show_single": false,
+            "select_first_variant": true,
+            "variant_style": "listed",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "1662673742cdd52fff-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_backorder_text": true
+          }
+        },
+        "1662673742cdd52fff-6": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": true,
+            "open_tab": false,
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "d97cee42-ef14-42a3-ad6d-656aa1506e3a",
+        "1662673742cdd52fff-0",
+        "1662673742cdd52fff-1",
+        "1662673742cdd52fff-3",
+        "1662673742cdd52fff-4",
+        "1662673742cdd52fff-5",
+        "1662673742cdd52fff-6"
+      ],
+      "settings": {
+        "product": "{{ collection.metafields.custom.collection_product_highlight.value }}",
+        "inventory_transfers_enable": false,
+        "gallery_size": "small",
+        "gallery_layout": "carousel-under",
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "16639587918484dd5b": {
+      "type": "collection-list",
+      "blocks": {
+        "bf8b8e95-5e73-4fe0-a5c7-b43f39ffb9b7": {
+          "type": "collection",
+          "settings": {
+            "collection": "automotive"
+          }
+        },
+        "d4dc9e8e-16a7-499e-ab7a-b8b524fe80a8": {
+          "type": "collection",
+          "settings": {
+            "collection": "commercial"
+          }
+        }
+      },
+      "block_order": [
+        "bf8b8e95-5e73-4fe0-a5c7-b43f39ffb9b7",
+        "d4dc9e8e-16a7-499e-ab7a-b8b524fe80a8"
+      ],
+      "settings": {
+        "title": "Your next service demands the right tool.",
+        "enable_carousel": true,
+        "grid": 4,
+        "use_alt_bg": true,
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1662673742bf38d6b1",
+    "16639587918484dd5b"
+  ]
+}
