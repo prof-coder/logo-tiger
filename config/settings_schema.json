@@ -1339,5 +1339,77 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "Adapter Kit Popup",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Initial State"
+      },
+      {
+        "type": "text",
+        "id": "popup-title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "popup-subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "popup-disclaimer",
+        "label": "Disclaimer"
+      },
+      {
+        "type": "header",
+        "content": "Search Sucess State"
+      },
+      {
+        "type": "text",
+        "id": "popup-success-title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "popup-success-subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "popup-success-subtitle-2",
+        "label": "Subtitle 2"
+      },
+      {
+        "type": "text",
+        "id": "button-prev-text",
+        "label": "Previous Button - Text"
+      },
+      {
+        "type": "text",
+        "id": "button-next-text",
+        "label": "Next Button - Text"
+      },
+      {
+        "type": "header",
+        "content": "Search Failed State"
+      },
+      {
+        "type": "text",
+        "id": "popup-fail-title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "popup-fail-content-title",
+        "label": "Content Title"
+      },
+      {
+        "type": "textarea",
+        "id": "popup-fail-content-body",
+        "label": "Content Body"
+      }
+    ]
   }
 ]

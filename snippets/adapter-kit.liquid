@@ -1,0 +1,184 @@
+<div id="adapter-popup-wrapper" class="adapter-popup-wrapper js-adapter-popup-wrapper {% unless product.first_available_variant.metafields.arena.show-popup == 'true' %}hide-dropdown{% endunless %}">
+  <div class="adapter-wrapper__inner">
+    <div class="adapter-wrapper__content">
+      <div class="adapter-wrapper__title">
+        {{ mod_settings.title }}
+      </div>
+      <button class="button adapter-wrapper__button js-adapter-popup-trigger">
+        <span class="plus">+</span>
+        {{ mod_settings.button_text }}
+      </button>
+    </div>
+  </div>
+
+  <div id="adapter-popup" class="adapter-popup js-adapter-popup">
+    <div class="adapter-popup__bg"></div>
+    <div class="adapter-popup__inner">
+      <div class="adapter-popup__close js-adapter-popup-trigger">{% render 'svg-x-thin' %}</div>
+
+      <div class="adapter-popup__step js-adapter-popup-step active"
+        data-step="init"
+      >
+        <div class="adapter-popup__heading">
+          <h3 class="adapter-popup__title">{{ settings.popup-title }}</h3>
+          <div class="adapter-popup__body">{{ settings.popup-subtitle }}</div>
+        </div>
+
+        <div class="adapter-popup__content">
+          <input id="search-input" class="adapter-popup__search-input js-adapter-popup-search" type="text">
+          <div class="adapter-popup__desc">{{ settings.popup-disclaimer }}</div>
+        </div>
+
+        <div class="adapter-popup__actions">
+          <button class="button adapter-popup__btn-submit js-adapter-popup-search-trigger"
+            data-product=""
+          >submit</button>
+        </div>
+      </div>
+
+      <div class="adapter-popup__step js-adapter-popup-step"
+        data-step="result"
+      >
+        <div class="adapter-popup__heading">
+          <h3 class="adapter-popup__title">{{ settings.popup-success-title }}</h3>
+          <div class="adapter-popup__body">{{ settings.popup-success-subtitle }}</div>
+        </div>
+        <div class="adapter-popup__product js-adapter-popup-product"></div>
+        <div class="adapter-popup__actions">
+          <button class="button adapter-popup__reset js-adapter-popup-step-reset">{% render 'icon-left' %}</button>
+          <button class="button adapter-popup__add js-adapter-popup-add"
+            data-variant=""
+          >{%- render 'svg-basket' -%}</button>
+        </div>
+      </div>
+
+      <div class="adapter-popup__step js-adapter-popup-step"
+        data-step="no-result"
+      >
+        <div class="adapter-popup__heading">
+          <h3 class="adapter-popup__title">{{ settings.popup-fail-title }}</h3>
+        </div>
+        <div class="adapter-popup__content adapter-popup__content--failed">
+          <div class="adapter-popup__failed_title">
+            {{ settings.popup-fail-content-title }}
+          </div>
+          <div class="adapter-popup__failed_body">
+            {{ settings.popup-fail-content-body }}
+          </div>
+        </div>
+        <div class="adapter-popup__actions">
+          <button class="button adapter-popup__reset js-adapter-popup-step-reset"
+          >{% render 'icon-left' %}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)
+  [0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  const BUSHING_PRODUCTS = [];
+
+  {%- for mod_product in collections['pin-bushing-adapter-kits'].products -%}
+    BUSHING_PRODUCTS.push({
+      bushingId: '{{ mod_product.metafields.custom.test_1 | newline_to_br | strip_newlines | replace: '<br />', '||' | replace: '-', '' | downcase }}',
+      image: '{{ mod_product.images[0].src | product_img_url: "400x" }}',
+      title: '{{ mod_product.title }}',
+      price: '{{ mod_product.price | money_without_trailing_zeros }}',
+      url: '{{ mod_product.url }}',
+      variant: '{{ mod_product.first_available_variant.id }}'
+    });
+  {%- endfor -%}
+
+  function activeStep (popup, stepValue) {
+    const steps = popup.querySelectorAll('.js-adapter-popup-step');
+    steps.forEach((step) => {
+      const type = step.getAttribute('data-step');
+
+      if (type == stepValue) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
+    });
+  }
+
+  function insertTemplate (data, searchInput) {
+    const popup = searchInput.closest('.js-adapter-popup');
+    activeStep(popup, 'result');
+    const productContent = popup.querySelector('.js-adapter-popup-product');
+    productContent.innerHTML = '';
+    productContent.insertAdjacentHTML('afterbegin', `
+      <a class="adapter-product"
+        href="${data.url}"
+      >
+        <img class="adapter-product__image"
+          src="${data.image}"
+        />
+        <div class="adapter-product__title">${data.title}</div>
+        <div class="adapter-product__price">${data.price}</div>
+      </a>
+    `);
+
+    const atc = popup.querySelector('.js-adapter-popup-add');
+    atc.setAttribute('data-variant', data.variant);
+  }
+
+  function bindUIEvents () {
+    const triggers = document.querySelectorAll('.js-adapter-popup-trigger');
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        const wrapper = trigger.closest('.js-adapter-popup-wrapper');
+        const popup = wrapper.querySelector('.js-adapter-popup');
+
+        if (popup) popup.classList.toggle('active');
+      });
+    });
+
+
+    const resetBtns = document.querySelectorAll('.js-adapter-popup-step-reset');
+    resetBtns.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        const popup = trigger.closest('.js-adapter-popup');
+        activeStep(popup, 'init');
+      });
+    });
+
+    const searchBtns = document.querySelectorAll('.js-adapter-popup-search-trigger');
+    searchBtns.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        const popup = trigger.closest('.js-adapter-popup');
+        const searchInput = popup.querySelector('.js-adapter-popup-search');
+        if (searchInput) onPopupSearch(searchInput);
+      });
+    });
+
+    const searchInputs = document.querySelectorAll('.js-adapter-popup-search');
+    searchInputs.forEach((input) => {
+      input.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+          onPopupSearch(input);
+        }
+      });
+    });
+  }
+
+  function onPopupSearch (searchInput) {
+    const searchValue = searchInput.value.replace(/-/g,'').replace(/ /g,'').toLowerCase();
+    const matchedBushing = BUSHING_PRODUCTS.find((item) => item.bushingId.indexOf(searchValue) != -1);
+
+    if (matchedBushing) {
+      insertTemplate(matchedBushing, searchInput);
+    } else {
+      const popup = searchInput.closest('.js-adapter-popup');
+      activeStep(popup, 'no-result');
+      ga('send', 'event', 'Search Value', searchValue);
+    }
+  }
+
+  bindUIEvents ();
+</script>

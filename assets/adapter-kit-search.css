@@ -1,0 +1,206 @@
+.adapter-popup-wrapper {
+  display: block;
+}
+
+.adapter-wrapper__content {
+  padding: 15px 0;
+  margin-top: 10px;
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.adapter-wrapper__title {
+  color: #c20000;
+  font-weight: bold;
+}
+
+.adapter-wrapper__button {
+  width: 100%;
+  height: 45px;
+  background-color: #c20000;
+  color: #fff;
+  border: 0px solid #d3d3d3;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+}
+
+.adapter-wrapper__button .plus {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 4px;
+  margin-right: 10px;
+}
+
+.adapter-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 15px 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.adapter-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.adapter-popup__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.adapter-popup__inner {
+  background-color: #f1f1f1;
+  position: relative;
+  height: 100%;
+  max-height: 715px;
+  padding: 80px 30px 30px;
+  text-align: center;
+}
+
+.adapter-popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.adapter-popup__close svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.adapter-popup__body {
+  margin-top: 25px;
+}
+
+.adapter-popup .adapter-popup__search-input {
+  width: 100%;
+  border-radius: 5px;
+  border-color: currentColor;
+  margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.adapter-popup__desc {
+  margin-top: 30px;
+  color: #666;
+}
+
+.adapter-popup__desc p {
+  font-size: 13px;
+}
+
+.adapter-popup__step {
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.adapter-popup__step[data-step="init"] {
+  padding-bottom: 40px;
+}
+
+.adapter-popup__step.active {
+  display: flex;
+}
+
+.adapter-popup .adapter-popup__title {
+  font-size: 38px;
+}
+
+.adapter-popup__body p {
+  font-size: 16px;
+}
+
+.adapter-popup__actions {
+}
+
+.adapter-popup__reset,
+.adapter-popup__add {
+  height: 100px;
+  padding: 30px;
+  width: calc(45% - 15px);
+  max-width: 100px;
+}
+
+.adapter-popup__reset svg,
+.adapter-popup__add svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.adapter-popup__add {
+  background: #f18a1b;
+  color: #000;
+  margin-left: 30px;
+}
+
+.adapter-popup__btn-submit {
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  background: #c20000;
+}
+
+.adapter-product {
+  font-size: 16px;
+}
+
+.adapter-product__image {
+  display: block;
+  width: 100%;
+}
+
+.adapter-product__title {
+  color: #1a4056;
+  margin-top: 15px;
+}
+
+.adapter-product__price {
+  margin-top: 5px;
+}
+
+.adapter-popup__content--failed {
+  background-color: #dedee0;
+  padding: 35px 30px;
+  margin: 0 -30px;
+}
+
+.adapter-popup__failed_title {
+  font-size: 16px;
+}
+
+.adapter-popup__failed_body {
+  margin-top: 5px;
+}

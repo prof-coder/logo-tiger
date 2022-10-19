@@ -265,6 +265,12 @@
                 {%- endif -%}
               </div>
 
+            {% when 'adapter_kit' %}
+              {{ 'adapter-kit-search.css' | asset_url | stylesheet_tag }}
+              {%- render 'adapter-kit',
+                mod_settings: block.settings
+              -%}
+
             {% when 'description' %}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
                 {% if block.settings.show_in_tab %}
@@ -845,6 +851,25 @@
             "id": "enable_product_reviews_by_price",
             "info": "Add reviews by installing the [Shopify Product Reviews app](https:\/\/apps.shopify.com\/product-reviews)",
             "default": true
+          }
+        ]
+      },
+      {
+        "type": "adapter_kit",
+        "name": "Adapter Kit",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title",
+            "default": "This kit doesn’t include any necessary Adapters required to operate."
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Title",
+            "default": "Adapter Kits"
           }
         ]
       },

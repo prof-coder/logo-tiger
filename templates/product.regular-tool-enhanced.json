@@ -53,6 +53,11 @@
             "show_pickup_availability": false
           }
         },
+        "34a6fb62-b804-4f64-bcb6-a9574753d1da": {
+          "type": "adapter_kit",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -141,6 +146,7 @@
         "divider",
         "variant_picker",
         "buy_buttons",
+        "34a6fb62-b804-4f64-bcb6-a9574753d1da",
         "description",
         "8ee0d56e-845e-4255-96ed-5dffc797b262",
         "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",

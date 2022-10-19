@@ -1040,6 +1040,17 @@
     "favicon": "shopify:\/\/shop_images\/UJoint.png",
     "animations_enabled_desktop": false,
     "cart_type": "drawer",
+    "popup-title": "Type In Your Bushing Number",
+    "popup-subtitle": "<p>To service a set of bushings, you must first type in the OEM bushing number to see if there is an available Pin &amp; Bushing Adapter Kit available from Tiger Tool.&nbsp;<\/p>",
+    "popup-disclaimer": "<p><strong>Please note:<\/strong>&nbsp;The Pin &amp; Bushing Starter Kit requires at least 1 Adapter Kit in order to operate.<\/p>",
+    "popup-success-title": "Available Adapter Kit",
+    "popup-success-subtitle": "<p>Required Adapter Kit for your application<\/p>",
+    "popup-success-subtitle-2": "<p><strong>To continue, add to your Adapter Kit to the cart.<\/strong><\/p>",
+    "button-prev-text": "Add To Cart<br>& Go Back",
+    "button-next-text": "Add To Cart<br>& Close",
+    "popup-fail-title": "No Available Adapter Kits",
+    "popup-fail-content-title": "Don't Sweat it.",
+    "popup-fail-content-body": "We're always developing new Adapter Kits. Check back often to see if we have what you're after.",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -1076,7 +1087,7 @@
           "announcement_text_col": "#ffffff",
           "message_font_size": 11,
           "show_social_icons": false,
-          "menu": "test-menu",
+          "menu": "announcement-menu",
           "show_country_selector": true,
           "show_language_selector": false
         }
