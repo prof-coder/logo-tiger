@@ -4,7 +4,9 @@
       <div class="adapter-wrapper__title">
         {{ mod_settings.title }}
       </div>
-      <button class="button adapter-wrapper__button js-adapter-popup-trigger">
+      <button class="button adapter-wrapper__button js-adapter-popup-trigger"
+        data-mod="open"
+      >
         <span class="plus">+</span>
         {{ mod_settings.button_text }}
       </button>
@@ -12,7 +14,7 @@
   </div>
 
   <div id="adapter-popup" class="adapter-popup js-adapter-popup">
-    <div class="adapter-popup__bg"></div>
+    <div class="adapter-popup__bg js-adapter-popup-trigger"></div>
     <div class="adapter-popup__inner">
       <div class="adapter-popup__close js-adapter-popup-trigger">{% render 'svg-x-thin' %}</div>
 
@@ -20,7 +22,7 @@
         data-step="init"
       >
         <div class="adapter-popup__heading">
-          <h3 class="adapter-popup__title">{{ settings.popup-title }}</h3>
+          <h3 class="adapter-popup__title">{{ settings.popup-title | newline_to_br }}</h3>
           <div class="adapter-popup__body">{{ settings.popup-subtitle }}</div>
         </div>
 
@@ -44,19 +46,21 @@
           <div class="adapter-popup__body">{{ settings.popup-success-subtitle }}</div>
         </div>
         <div class="adapter-popup__product js-adapter-popup-product"></div>
-        <div class="adapter-popup__actions">
-          <button class="button adapter-popup__reset js-adapter-popup-step-reset">{% render 'icon-left' %}</button>
-          <button class="button adapter-popup__add js-adapter-popup-add"
-            data-variant=""
-          >{%- render 'svg-basket' -%}</button>
-        </div>
+        <form class="js-adapter-popup-form">
+          <div class="adapter-popup__actions">
+            <button type="button" class="button adapter-popup__reset js-adapter-popup-step-reset">{% render 'icon-left' %}</button>
+            <button type="submit"
+              class="button adapter-popup__add js-adapter-popup-add"
+            >{%- render 'svg-basket' -%}</button>
+          </div>
+        </form>
       </div>
 
       <div class="adapter-popup__step js-adapter-popup-step"
         data-step="no-result"
       >
         <div class="adapter-popup__heading">
-          <h3 class="adapter-popup__title">{{ settings.popup-fail-title }}</h3>
+          <h3 class="adapter-popup__title">{{ settings.popup-fail-title | newline_to_br }}</h3>
         </div>
         <div class="adapter-popup__content adapter-popup__content--failed">
           <div class="adapter-popup__failed_title">
@@ -126,6 +130,58 @@
 
     const atc = popup.querySelector('.js-adapter-popup-add');
     atc.setAttribute('data-variant', data.variant);
+
+    const form = popup.querySelector('.js-adapter-popup-form');
+    if (form) {
+      const existData = form.querySelector('.js-form-properties');
+      if (existData) existData.remove();
+
+      form.insertAdjacentHTML('afterbegin', `
+        <div class="js-form-properties">
+          <input type="hidden" name="id" value="${data.variant}" />
+          <input type="hidden" name="quantity" value="1" />
+        </div>
+      `);
+    }
+  }
+
+  function addItemToCart(form) {
+    const config = {
+      method: 'POST',
+      headers: {
+        Accept: `application/javascript`,
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    }
+
+    const formData = new FormData(form);
+    formData.append('sections', 'cart-drawer');
+    config.body = formData;
+
+    fetch(theme.routes.cart_add_url, config)
+      .then((response) => response.text())
+      .then((state) => {
+        const parsedState = JSON.parse(state);
+        if (parsedState.status) return false;
+
+        closePopup();
+
+        document.dispatchEvent(new CustomEvent('THEME_CART_CHANGED', {
+          detail: {
+            data: parsedState
+          }
+        }));
+      })
+  }
+
+  function closePopup (paramPopup = '') {
+    const popup = (paramPopup) ? paramPopup : document.querySelector('.js-adapter-popup')
+    if (popup) {
+      popup.classList.remove('active');
+      setTimeout(function() {
+        activeStep(popup, 'init');
+      }, 300);
+    }
   }
 
   function bindUIEvents () {
@@ -135,10 +191,14 @@
         const wrapper = trigger.closest('.js-adapter-popup-wrapper');
         const popup = wrapper.querySelector('.js-adapter-popup');
 
-        if (popup) popup.classList.toggle('active');
+        const mod = trigger.getAttribute('data-mod');
+        if (mod == 'open') {
+          popup.classList.add('active');
+        } else {
+          closePopup(popup)
+        }
       });
     });
-
 
     const resetBtns = document.querySelectorAll('.js-adapter-popup-step-reset');
     resetBtns.forEach((trigger) => {
@@ -165,6 +225,14 @@
         }
       });
     });
+
+    const forms = document.querySelectorAll('.js-adapter-popup-form');
+    forms.forEach((form) => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addItemToCart(form);
+      });
+    })
   }
 
   function onPopupSearch (searchInput) {

@@ -266,10 +266,15 @@
               </div>
 
             {% when 'adapter_kit' %}
-              {{ 'adapter-kit-search.css' | asset_url | stylesheet_tag }}
-              {%- render 'adapter-kit',
-                mod_settings: block.settings
-              -%}
+              {%- case block.settings.type -%}
+                {%- when 'search' -%}
+                  {{ 'adapter-kit-search.css' | asset_url | stylesheet_tag }}
+                  {%- render 'adapter-kit-search',
+                    mod_settings: block.settings
+                  -%}
+                {%- when 'dropdown' -%}
+                {%- when 'list' -%}
+              {%- endcase -%}
 
             {% when 'description' %}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
@@ -859,6 +864,26 @@
         "name": "Adapter Kit",
         "limit": 1,
         "settings": [
+          {
+            "type": "select",
+            "id": "type",
+            "options": [
+              {
+                "value": "search",
+                "label": "Search ( Popup )"
+              },
+              {
+                "value": "list",
+                "label": "List"
+              },
+              {
+                "value": "dropdown",
+                "label": "Dropdown"
+              }
+            ],
+            "default": "search",
+            "label": "Type"
+          },
           {
             "type": "textarea",
             "id": "title",

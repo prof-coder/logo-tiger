@@ -3265,6 +3265,9 @@
 
   /*=============== Components ===============*/
   theme.applyAjaxToProductForm = function ($formContainer) {
+    document.addEventListener('THEME_CART_CHANGED', (data) => {
+      if (data.detail && data.detail.data) theme.addedToCartHandler(data.detail.data)
+    });
     $formContainer.find('form.product-purchase-form').each(function () {
       var $form = $(this);
       $form.on('submit', function (evt) {

@@ -74,6 +74,7 @@
   max-height: 715px;
   padding: 80px 30px 30px;
   text-align: center;
+  max-width: 500px;
 }
 
 .adapter-popup__close {
@@ -165,12 +166,19 @@
   margin-left: 30px;
 }
 
+.adapter-popup__add:hover {
+  color: #fff;
+}
+
 .adapter-popup__btn-submit {
   font-size: 16px;
   text-transform: uppercase;
   display: block;
   width: 100%;
   background: #c20000;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .adapter-product {
