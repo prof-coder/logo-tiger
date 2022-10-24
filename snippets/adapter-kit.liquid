@@ -1,0 +1,26 @@
+{%- liquid
+  assign enable = mod_product.metafields.adapter.enable_section
+  assign type = mod_product.metafields.adapter.type | handleize
+  assign collection_handle = mod_product.metafields.adapter.collection_handle
+  assign mod_collection = collections[collection_handle]
+-%}
+
+{%- if enable == true -%}
+  {%- liquid
+    case type
+      when 'search'
+        echo 'adapter-kit-search.css' | asset_url | stylesheet_tag
+        render 'adapter-kit-search', mod_settings: mod_settings, mod_collection: mod_collection, mod_product: mod_product
+      when 'list'
+        echo 'adapter-kit-list.css' | asset_url | stylesheet_tag
+        render 'adapter-kit-list', mod_settings: mod_settings, mod_collection: mod_collection, mod_product: mod_product
+      when 'dropdown'
+        echo 'adapter-kit-list.css' | asset_url | stylesheet_tag
+        render 'adapter-kit-dropdown', mod_settings: mod_settings, mod_collection: mod_collection, mod_product: mod_product
+    endcase
+  -%}
+
+  {%- unless type == 'search' -%}
+    <script type="text/javascript" src="{{ 'adapter-kit.js' | asset_url }}"></script>
+  {%- endunless -%}
+{%- endif -%}

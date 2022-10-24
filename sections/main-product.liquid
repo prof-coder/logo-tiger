@@ -266,16 +266,9 @@
               </div>
 
             {% when 'adapter_kit' %}
-              {%- case block.settings.type -%}
-                {%- when 'search' -%}
-                  {{ 'adapter-kit-search.css' | asset_url | stylesheet_tag }}
-                  {%- render 'adapter-kit-search',
-                    mod_settings: block.settings
-                  -%}
-                {%- when 'dropdown' -%}
-                {%- when 'list' -%}
-              {%- endcase -%}
-
+              {%- liquid
+                render 'adapter-kit', mod_settings: block.settings, mod_product: product
+              -%}
             {% when 'description' %}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
                 {% if block.settings.show_in_tab %}
@@ -700,7 +693,6 @@
 
 {% render 'structured-data-product', product: product, current_variant: product.selected_or_first_available_variant %}
 
-
 {% schema %}
   {
     "name": "Product pages",
@@ -865,28 +857,8 @@
         "limit": 1,
         "settings": [
           {
-            "type": "select",
-            "id": "type",
-            "options": [
-              {
-                "value": "search",
-                "label": "Search ( Popup )"
-              },
-              {
-                "value": "list",
-                "label": "List"
-              },
-              {
-                "value": "dropdown",
-                "label": "Dropdown"
-              }
-            ],
-            "default": "search",
-            "label": "Type"
-          },
-          {
             "type": "textarea",
-            "id": "title",
+            "id": "block_title",
             "label": "Title",
             "default": "This kit doesn’t include any necessary Adapters required to operate."
           },

@@ -1,0 +1,57 @@
+{%- if mod_collection != blank -%}
+  <div class="adapter-shadow-scroll js-shadow-scroll-wrapper">
+    <div class="shadow shadow--top"></div>
+    <div class="shadow shadow--bottom"></div>
+    <div class="adapter-list js-shadow-scroll-content">
+      <div cass="adapter-list__inner">
+        {%- for product_item in mod_collection.products -%}
+          {%- assign first_variant_item = product_item.variants | first -%}
+          <div class="adapter-item">
+            <div class="adapter-item__content">
+              <div class="adapter-item__row">
+                <div class="adapter-item__title">
+                  <div class="adapter-item__sub-note">Part Number</div>
+                  <div class="adapter-item__sub-value">{{ product_item.title | split: '|' | first }}</div>
+                </div>
+                <div class="adapter-item__number">
+                  <div class="adapter-item__sub-note">Number Required</div>
+                  <div class="adapter-item__sub-value">1</div>
+                </div>
+                <div class="adapter-item__price">
+                  <div class="adapter-item__sub-note">Price</div>
+                  <div class="adapter-item__sub-value">{{ product_item.price | money }}</div>
+                </div>
+              </div>
+              <div class="adapter-item__row">
+                <div class="adapter-item__description">
+                  <div class="adapter-item__sub-note">Description</div>
+                  <div class="adapter-item__sub-detail">Forcing screw or what have you.</div>
+                </div>
+              </div>
+            </div>
+            <div class="adapter-item__actions">
+              <form class="adapter-item__form js-adapter-form">
+                <input type="hidden" name="id" value="{{ first_variant_item.id }}" />
+                <div class="adapter-item__quantity hidden-mobile">
+                  <span class="adapter-item__quantity--minus js-sticky-cta-frequency-change"
+                    data-mod="minus"
+                  ></span>
+                  <span class="adapter-item__quantity--value js-sticky-cta-frequency">
+                    <input type="text" name="quantity" value="1" />
+                  </span>
+                  <span class="adapter-item__quantity--plus js-sticky-cta-frequency-change"
+                    data-mod="plus"
+                  ></span>
+                </div>
+                <button type="submit" class="adapter-item__add">
+                  <span class="hidden-desktop">{%- render 'svg-basket' -%}</span>
+                  <span class="hidden-mobile">Add to Cart</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -53,10 +53,10 @@
             "show_pickup_availability": false
           }
         },
-        "8afefe61-fea0-44a4-a4f7-63f5c3aea5da": {
+        "d71f47b6-1371-4f06-b698-64a29ee6984d": {
           "type": "adapter_kit",
           "settings": {
-            "title": "This kit doesn’t include any necessary Adapters required to operate.",
+            "block_title": "This kit doesn’t include any necessary Adapters required to operate.",
             "button_text": "Adapter Kits"
           }
         },
@@ -148,7 +148,7 @@
         "divider",
         "variant_picker",
         "buy_buttons",
-        "8afefe61-fea0-44a4-a4f7-63f5c3aea5da",
+        "d71f47b6-1371-4f06-b698-64a29ee6984d",
         "description",
         "8ee0d56e-845e-4255-96ed-5dffc797b262",
         "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",

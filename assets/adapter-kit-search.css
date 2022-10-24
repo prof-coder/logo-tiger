@@ -212,3 +212,17 @@
 .adapter-popup__failed_body {
   margin-top: 5px;
 }
+
+@media (min-width: 1024px) {
+  .adapter-wrapper__content {
+    display: flex;
+    align-items: center;
+  }
+
+  .adapter-wrapper__button {
+    margin-top: 0;
+    min-width: 200px;
+    width: auto;
+    margin-left: 15px;
+  }
+}

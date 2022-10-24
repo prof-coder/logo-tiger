@@ -1,0 +1,41 @@
+{%- if mod_collection != blank -%}
+  <div class="adapter-dropdown js-adapter-dropdown">
+    <div class="adapter-dropdown__heading js-adapter-dropdown-heading">
+      <span class="arrow"></span>
+      <span class="text">Components / Adapters</span>
+    </div>
+
+    <div class="adapter-dropdown__content js-adapter-dropdown-content adapter-shadow-scroll js-shadow-scroll-wrapper">
+      <div class="shadow shadow--top"></div>
+      <div class="shadow shadow--bottom"></div>
+      <div class="adapter-dropdown__inner js-shadow-scroll-content">
+        {%- for product_item in mod_collection.products -%}
+          {%- assign first_variant_item = product_item.variants | first -%}
+          <div class="adapter-item">
+            <div class="adapter-item__content">
+              <div class="adapter-item__row">
+                <div class="adapter-item__title">
+                  <div class="adapter-item__sub-note">{{ product_item.title | split: '|' | first }}</div>
+                  <div class="adapter-item__sub-value">{{ product_item.title | split: '|' | last }}</div>
+                </div>
+                <div class="adapter-item__price">
+                  <div class="adapter-item__sub-note">Price</div>
+                  <div class="adapter-item__sub-value">{{ product_item.price | money }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="adapter-item__actions">
+              <form class="adapter-item__form js-adapter-form">
+                <input type="hidden" name="id" value="{{ first_variant_item.id }}" />
+                <input type="hidden" name="quantity" value="1" />
+                <button type="submit" class="adapter-item__add">
+                  <span>{%- render 'svg-basket' -%}</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
