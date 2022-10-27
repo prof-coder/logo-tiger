@@ -530,9 +530,9 @@
               {% endif %}
 
             {% when 'link' %}
-              {% if block.settings.text != blank %}
+              {% if block.settings.text != blank or block.settings.chevron == true %}
                 <div class="lightly-spaced-row{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
-                  <a class="{% if block.settings.style != 'link' %}btn btn--{{ block.settings.style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.url }}"{% if block.settings.open_in_new_tab %} target="_blank"{% endif %}>{{ block.settings.text | escape }}</a>
+                  <a class="{% if block.settings.style != 'link' %}btn btn--{{ block.settings.style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.url }}"{% if block.settings.open_in_new_tab %} target="_blank"{% endif %}>{% if block.settings.chevron %}{% render 'svg-chevron-left' %}{%  endif %} {{ block.settings.text | escape }}</a>
                 </div>
               {% endif %}
 
@@ -1859,6 +1859,12 @@
             "type": "checkbox",
             "id": "open_in_new_tab",
             "label": "Open link in new tab",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "chevron",
+            "label": "Add Chevron to Button",
             "default": false
           },
           {
