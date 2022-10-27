@@ -1,0 +1,128 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69": {
+          "type": "sku",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "bd5fad66-ab05-425b-82ea-14b6a7451123": {
+          "type": "link",
+          "settings": {
+            "url": "{{ product.metafields.custom.spare_parts_back_button.value }}",
+            "open_in_new_tab": false,
+            "chevron": true,
+            "text": "",
+            "style": "primary",
+            "show_in_quickbuy": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": false,
+            "open_tab": false,
+            "icon": "",
+            "show_in_quickbuy": true
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "d71f47b6-1371-4f06-b698-64a29ee6984d": {
+          "type": "adapter_kit",
+          "settings": {
+            "block_title": "This kit doesn’t include any necessary Adapters required to operate.",
+            "button_text": "Adapter Kits"
+          }
+        }
+      },
+      "block_order": [
+        "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69",
+        "title",
+        "bd5fad66-ab05-425b-82ea-14b6a7451123",
+        "description",
+        "divider",
+        "d71f47b6-1371-4f06-b698-64a29ee6984d"
+      ],
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": false,
+        "enable_sticky_columns": true,
+        "gallery_size": "large",
+        "gallery_layout": "collage-2",
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "1663023411b91ba21c": {
+      "type": "logo-list",
+      "blocks": {
+        "1accf9b1-ffa0-4684-85af-e12b8c80911e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "340c24ea-a178-4172-b626-fa55d571d4c8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8_f51a709b-0e43-4527-8208-e949b5dc54cf.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "901a64eb-e1b3-445f-bc9a-0de8528f59e7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NorthAmerica_8_ff4d360f-30d1-45dc-9afd-d06505219d83.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "1accf9b1-ffa0-4684-85af-e12b8c80911e",
+        "340c24ea-a178-4172-b626-fa55d571d4c8",
+        "901a64eb-e1b3-445f-bc9a-0de8528f59e7"
+      ],
+      "settings": {
+        "title": "",
+        "image_opacity": 85,
+        "use_alt_bg": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like",
+        "show_vendor": false,
+        "grid": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663023411b91ba21c",
+    "recommendations"
+  ]
+}
