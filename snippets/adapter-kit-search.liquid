@@ -94,7 +94,7 @@
       bushing_ids = {{ mod_product.metafields.custom.bushing_id | default: '[]' }};
 
       object = {
-        bushingId: '{{ mod_product.metafields.custom.test_1 | newline_to_br | strip_newlines | replace: '<br />', '||' | replace: '-', '' | downcase }}',
+        bushingId: '',
         image: '{{ mod_product.images[0].src | product_img_url: "400x" }}',
         title: '{{ mod_product.title }}',
         price: '{{ mod_product.price | money_without_trailing_zeros }}',
@@ -102,12 +102,7 @@
         variant: '{{ mod_product.first_available_variant.id }}'
       };
 
-      object.bushingId = object.bushingId + '||' + bushing_ids.join('||') + '||';
-
-      if (object.title.indexOf(' | ') != -1) {
-        titleArray = object.title.split(' | ');
-        object.bushingId = object.bushingId + '||' + titleArray[0] + '||';
-      }
+      if (bushing_ids[0]) object.bushingId = object.bushingId + '||' + bushing_ids.join('||') + '||';
 
       BUSHING_PRODUCTS.push(object);
     {%- endfor -%}
@@ -250,7 +245,7 @@
     }
 
     function onPopupSearch (searchInput) {
-      const searchValue = searchInput.value.replace(/-/g,'').replace(/ /g,'').toLowerCase();
+      const searchValue = searchInput.value.replace(/-/g,'').replace(/ /g,'').toLowerCase() + '||';
       const matchedBushing = BUSHING_PRODUCTS.find((item) => item.bushingId.indexOf(searchValue) != -1);
 
       if (matchedBushing) {
