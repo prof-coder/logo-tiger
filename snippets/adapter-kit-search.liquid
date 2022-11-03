@@ -189,6 +189,8 @@
         popup.classList.remove('active');
         setTimeout(function() {
           activeStep(popup, 'init');
+          const searchInput = popup.querySelector('.js-adapter-popup-search');
+          if (searchInput) searchInput.value = '';
         }, 300);
       }
     }
