@@ -945,23 +945,23 @@
   },
   "current": {
     "use_fullwidth_layout": true,
-    "font_col_base": "#1a4056",
+    "font_col_base": "#4d4d4d",
     "font_col_link": "#171717",
-    "font_col_heads": "#1a4056",
+    "font_col_heads": "#252525",
     "font_col_shoptitle": "#171717",
     "font_col_sale": "#df5641",
     "btn_col": "#171717",
-    "btn_col_alt": "#171717",
-    "btn_col_txt": "#ffffff",
+    "btn_col_alt": "#535353",
+    "btn_col_txt": "#f18a1b",
     "btn_alt_bg": "#f7f7f8",
-    "btn_alt_txt": "#1a4056",
+    "btn_alt_txt": "#171717",
     "bg_col": "#ffffff",
     "bg_image": "",
     "bg_method": "repeatxy",
     "head_bg_col": "#202020",
     "head_txt_col": "#f7f7f7",
-    "head_nav_div_col": "#676869",
-    "font_col_nav": "#363636",
+    "head_nav_div_col": "#ffffff",
+    "font_col_nav": "#151515",
     "font_col_nav_hov": "#171717",
     "panel_nav_bg": "#e2e2e2",
     "nav_featured_col": "#df5641",
@@ -970,9 +970,9 @@
     "image_overlay_bg": "#000000",
     "image_overlay_opacity": 69,
     "image_overlay_shadow_opacity": 0,
-    "alt_bg_col": "#f5f5f5",
-    "alt_bg_head_col": "#262626",
-    "alt_bg_text_col": "#676869",
+    "alt_bg_col": "#151515",
+    "alt_bg_head_col": "#ffffff",
+    "alt_bg_text_col": "#f18a1b",
     "alt_bg_link_col": "#006098",
     "prod_thumb_detail_bg": "#fcfcfc",
     "prod_thumb_detail_col_h": "#171717",
@@ -991,22 +991,22 @@
     "prod_rating_star": "#f6a529",
     "cross_page_promo_bg": "#ffffff",
     "cross_page_promo_color": "#171717",
-    "foot_bg_col": "#f7f7f8",
+    "foot_bg_col": "#171717",
     "foot_text_col": "#676869",
-    "foot_heading_col": "#171717",
-    "foot_divider_col": "#e4e4e4",
+    "foot_heading_col": "#ffffff",
+    "foot_divider_col": "#f18a1b",
     "type_heading_font": "roboto_n9",
     "capitalize_headings": false,
     "type_base_font": "roboto_n4",
-    "type_nav_font": "roboto_n4",
+    "type_nav_font": "roboto_n7",
     "bold_mobile_nav": true,
     "type_logo_font": "roboto_n4",
-    "font_size_heading_int": 50,
+    "font_size_heading_int": 35,
     "font_size_base_int": 14,
     "font_size_nav_int": 12,
     "font_size_logo_int": 24,
     "button_style": "normal",
-    "button_shape": "sharp",
+    "button_shape": "slightlyrounded",
     "coll_grid_image_shape": "square",
     "coll_grid_show_count": false,
     "coll_thumb_text_align": "center",
@@ -1038,8 +1038,10 @@
     "live_search_show_price": false,
     "live_search_search_meta": true,
     "favicon": "shopify:\/\/shop_images\/UJoint.png",
-    "animations_enabled_desktop": false,
+    "animations_enabled_desktop": true,
     "cart_type": "drawer",
+    "product_currency_code_enabled": true,
+    "cart_currency_code_enabled": true,
     "popup-title": "Type In Your\n Bushing Number",
     "popup-subtitle": "<p>To service a set of bushings, you must first type in the OEM bushing number to see if there is an available Pin &amp; Bushing Adapter Kit available from Tiger Tool.&nbsp;<\/p>",
     "popup-disclaimer": "<p><strong>Please note:<\/strong>&nbsp;The Pin &amp; Bushing Starter Kit requires at least 1 Adapter Kit in order to operate.<\/p>",
@@ -1051,22 +1053,28 @@
     "popup-fail-title": "No Available\n Adapter Kits",
     "popup-fail-content-title": "Don't Sweat it.",
     "popup-fail-content-body": "We're always developing new Adapter Kits. Check back often to see if we have what you're after.",
+    "checkout_header_image": "shopify:\/\/shop_images\/CheckoutBanner_3.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/TigerTool_Hor_K.png",
+    "checkout_body_background_color": "#f7f7f7",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_color": "#fdfdfd",
+    "checkout_heading_font": "Roboto",
+    "checkout_accent_color": "#df5641",
+    "checkout_button_color": "#f18a1b",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
           "1478526632860": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p>Free shipping on orders over $150. <a href=\"https:\/\/tigertool.ca\/pages\/shipping\" title=\"Shipping\">Details<\/a><\/p>"
             }
           },
           "1478526632861": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": ""
+              "text": "<p>Engineered & Manufactured in North America<\/p>"
             }
           },
           "ac184fe1-a2ce-4b6f-a845-266c67a92311": {
@@ -1084,11 +1092,11 @@
         ],
         "settings": {
           "announcement_bar_col": "#151515",
-          "announcement_text_col": "#ffffff",
+          "announcement_text_col": "#f18a1b",
           "message_font_size": 11,
           "show_social_icons": false,
           "menu": "announcement-menu",
-          "show_country_selector": true,
+          "show_country_selector": false,
           "show_language_selector": false
         }
       },
@@ -1097,22 +1105,21 @@
         "blocks": {
           "e61f2b1a-976c-4253-ab42-25bea6f966c5": {
             "type": "menu-promotion-large",
-            "disabled": true,
             "settings": {
-              "dropdown_link_title": "Tools",
+              "dropdown_link_title": "Customer Service",
               "desktop_image": "shopify:\/\/shop_images\/HomePage_2048_1024_90150.jpg",
               "mobile_image": "shopify:\/\/shop_images\/HomePage_2048_1024_90150.jpg",
               "enable_fade": true,
-              "subheading": "Tell your story",
-              "title": "Wide menu promotion",
+              "subheading": "We're here to help",
+              "title": "Contact Us",
               "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
-              "button_1_label": "Shop this",
+              "button_1_label": "Contact Us",
               "button_1_link": "",
               "button_1_style": "secondary",
-              "button_2_label": "Shop all",
+              "button_2_label": "",
               "button_2_link": "",
               "button_2_style": "primary",
-              "image_position": "right",
+              "image_position": "left",
               "text_alignment": "left"
             }
           },
@@ -1124,11 +1131,41 @@
               "title": "Hello World",
               "link_url": "https:\/\/Google.com"
             }
+          },
+          "2671e840-6e4a-4443-a657-e7761baf6d3d": {
+            "type": "menu-promotion-small",
+            "settings": {
+              "dropdown_link_title": "Shop Tools",
+              "image": "shopify:\/\/shop_images\/Nav_Promo_1_e1e23e20-88ce-47a3-8b2c-962508975072.jpg",
+              "title": "Tool 1",
+              "link_url": "#"
+            }
+          },
+          "bcd4ee99-571b-4c59-b87a-46cbce605aee": {
+            "type": "menu-promotion-small",
+            "settings": {
+              "dropdown_link_title": "Shop Tools",
+              "image": "shopify:\/\/shop_images\/Nav_Promo_1_e1e23e20-88ce-47a3-8b2c-962508975072.jpg",
+              "title": "Tool 2",
+              "link_url": ""
+            }
+          },
+          "b1641619-c424-4de1-8226-0aa74e14980c": {
+            "type": "menu-promotion-small",
+            "settings": {
+              "dropdown_link_title": "Shop Tools",
+              "image": "shopify:\/\/shop_images\/Nav_Promo_1_e1e23e20-88ce-47a3-8b2c-962508975072.jpg",
+              "title": "Tool 3",
+              "link_url": ""
+            }
           }
         },
         "block_order": [
           "e61f2b1a-976c-4253-ab42-25bea6f966c5",
-          "37e9e6a5-11b6-4873-915b-d7056199c342"
+          "37e9e6a5-11b6-4873-915b-d7056199c342",
+          "2671e840-6e4a-4443-a657-e7761baf6d3d",
+          "bcd4ee99-571b-4c59-b87a-46cbce605aee",
+          "b1641619-c424-4de1-8226-0aa74e14980c"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/TigerTool_Hor_8d296ad4-929d-43f8-bc51-04dda011223e.png",
@@ -1248,12 +1285,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1601308717434": {
+          "67d34eb1-8c28-4670-84ce-e0ede12229cf": {
             "type": "text",
             "settings": {
-              "title": "Talk about your store",
-              "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>",
-              "image_width": 150,
+              "title": "Have What It Takes",
+              "text": "<p>For more than thirty years, Tiger Tool has been leading the way to ensure that technicians “Have What It Takes” to get the job done…and done right.<\/p>",
+              "image": "shopify:\/\/shop_images\/TigerTool_Hor_8d296ad4-929d-43f8-bc51-04dda011223e.png",
+              "image_width": 125,
               "show_social_icons": true,
               "soc_icons_large": false
             }
@@ -1261,28 +1299,36 @@
           "1601308671932": {
             "type": "menu",
             "settings": {
-              "title": "Quick links",
-              "menu": "footer"
+              "title": "Help",
+              "menu": "main-menu"
             }
           },
-          "1601308656020": {
+          "c48c4fb8-ca2a-4e95-9c6c-f7c7218f1b20": {
+            "type": "menu",
+            "settings": {
+              "title": "Policies",
+              "menu": "policies"
+            }
+          },
+          "3fc4ce2f-ce60-4ee9-92e1-bdacd0d20fe0": {
             "type": "newsletter",
             "settings": {
               "title": "Newsletter",
-              "text": "<p>Sign up for exclusive offers, original stories, events and more.<\/p>",
-              "button_style": "primary",
+              "text": "<p>Stay up to date with all the latest product announcements and promotions. <\/p>",
+              "button_style": "secondary",
               "show_social_icons": false,
               "soc_icons_large": false
             }
           }
         },
         "block_order": [
-          "1601308717434",
+          "67d34eb1-8c28-4670-84ce-e0ede12229cf",
           "1601308671932",
-          "1601308656020"
+          "c48c4fb8-ca2a-4e95-9c6c-f7c7218f1b20",
+          "3fc4ce2f-ce60-4ee9-92e1-bdacd0d20fe0"
         ],
         "settings": {
-          "lower_menu": "",
+          "lower_menu": "mobile-menu",
           "show_payment_icons": true,
           "show_country_selector": true,
           "show_language_selector": true
@@ -1297,6 +1343,7 @@
           "position": "bottom-right",
           "title": "Sign up and save",
           "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "image": "shopify:\/\/shop_images\/Menu_Mega_Image3.jpg",
           "show_newsletter": true,
           "show_social_icons": true
         }

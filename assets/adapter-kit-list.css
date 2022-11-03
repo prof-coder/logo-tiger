@@ -63,7 +63,7 @@
 }
 
 .adapter-item__actions {
-  min-width: 60px;
+  min-width: 40px;
 }
 
 .adapter-item__quantity {
@@ -120,7 +120,7 @@
   color: #000;
   width: 100%;
   border: 1px solid #000;
-  height: 60px;
+  height: 40px;
   padding: 0;
 }
 
@@ -226,7 +226,7 @@
 .shadow--bottom {
   bottom: 0;
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
 @media (max-width: 767px) {
@@ -241,26 +241,26 @@
   }
 
   .adapter-item__actions {
-    min-width: 120px;
+    min-width: 40px;
   }
 
   .adapter-dropdown .adapter-item__actions {
-    min-width: 80px;
+    min-width: 40px;
   }
 
   .adapter-item__form .adapter-item__add {
     margin-top: 10px;
     height: auto;
-    padding: 1em 15px;
+    padding: 0;
   }
 
   .adapter-dropdown .adapter-item__form .adapter-item__add {
     margin-top: 0;
-    height: 80px;
+    height: 40px;
   }
 
   .adapter-dropdown .adapter-item__form .adapter-item__add svg {
-    width: 30px;
+    width: 24px;
   }
 
   .adapter-dropdown .adapter-item__sub-value {

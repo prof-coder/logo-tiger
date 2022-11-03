@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "76628e5f-d3c9-444c-a539-311668627fbd": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TigerToolPolicies_Header_Header_1.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 300,
+        "height_mobile": 240,
+        "image_link": "",
+        "subheading": "Tiger Tool",
+        "title": "Policies",
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "full"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "full_width": false
+      }
+    },
+    "5a7e669a-c341-451d-9962-b60cce4ce945": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/15000Page_Map_2b6bc45b-80da-4053-b834-1db2fc5db421.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 300,
+        "height_mobile": 300,
+        "image_link": "shopify:\/\/pages\/refund",
+        "subheading": "",
+        "title": "Have Questions?",
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": false,
+        "button_label_1": "Contact Us",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    }
+  },
+  "order": [
+    "76628e5f-d3c9-444c-a539-311668627fbd",
+    "main",
+    "5a7e669a-c341-451d-9962-b60cce4ce945"
+  ]
+}

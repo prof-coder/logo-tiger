@@ -120,17 +120,6 @@
             "open": false,
             "show_in_quickbuy": false
           }
-        },
-        "1c391125-a8e4-49ae-9805-2eb5746909d4": {
-          "type": "accordion",
-          "settings": {
-            "title": "Warranty & Returns",
-            "icon": "",
-            "content": "<p><strong>Warranty<\/strong><br\/>We offer a Limited Lifetime Warranty on casting, two years on machined or threaded parts and one year warranty on hydraulic components.<\/p><p><a href=\"https:\/\/themedevnontigertool.myshopify.com\/pages\/warranty-and-limit-of-liability\" target=\"_blank\">Our full Warranty Policy<\/a><br\/><br\/><strong>Returns<\/strong><br\/>We offer a 60 day money back guarantee should you feel as though the tool is not the right tool for you. Just be sure it's in unused condition and in original packaging.<br\/><br\/><a href=\"https:\/\/themedevnontigertool.myshopify.com\/pages\/warranty-returns\" target=\"_blank\" title=\"Warranty & Returns\">Start a Warranty & Return Process<\/a><\/p>",
-            "page": "",
-            "open": false,
-            "show_in_quickbuy": false
-          }
         }
       },
       "block_order": [
@@ -147,8 +136,7 @@
         "672e9b2f-96d6-426e-a69d-eed15f90a7ee",
         "b6d42500-81ec-42b4-a65f-e2aeec1195da",
         "4ff2695e-2331-4163-bf02-b005628a558e",
-        "1027b487-b686-426a-93bb-7b5dcf10066c",
-        "1c391125-a8e4-49ae-9805-2eb5746909d4"
+        "1027b487-b686-426a-93bb-7b5dcf10066c"
       ],
       "settings": {
         "show_breadcrumbs": false,
@@ -224,7 +212,7 @@
     "16631765868a09e66b": {
       "type": "product-template-product-list",
       "settings": {
-        "title": "Related Tools you'll like.",
+        "title": "Related Tools",
         "product_list": "{{ product.metafields.custom.product_list_1.value }}",
         "hide_if_empty": true,
         "show_vendor": false,

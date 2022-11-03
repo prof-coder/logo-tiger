@@ -53,9 +53,11 @@
             "show_pickup_availability": false
           }
         },
-        "34a6fb62-b804-4f64-bcb6-a9574753d1da": {
+        "27865c54-b28e-40f9-9e16-b34cc0f5a254": {
           "type": "adapter_kit",
           "settings": {
+            "block_title": "This kit doesn’t include any necessary Adapters required to operate.",
+            "button_text": "Adapter Kits"
           }
         },
         "description": {
@@ -78,6 +80,7 @@
           "settings": {
             "url": "{{ product.metafields.custom.instructions_url.value }}",
             "open_in_new_tab": true,
+            "chevron": false,
             "text": "Instructions",
             "style": "secondary",
             "show_in_quickbuy": false
@@ -88,6 +91,7 @@
           "settings": {
             "url": "{{ product.metafields.custom.spare_parts_url.value }}",
             "open_in_new_tab": true,
+            "chevron": false,
             "text": "Spare Parts",
             "style": "primary",
             "show_in_quickbuy": false
@@ -146,7 +150,7 @@
         "divider",
         "variant_picker",
         "buy_buttons",
-        "34a6fb62-b804-4f64-bcb6-a9574753d1da",
+        "27865c54-b28e-40f9-9e16-b34cc0f5a254",
         "description",
         "8ee0d56e-845e-4255-96ed-5dffc797b262",
         "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",

@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-contact",
+      "disabled": true,
       "blocks": {
         "name": {
           "type": "name_input",
@@ -18,6 +19,7 @@
         "message": {
           "type": "message_input",
           "settings": {
+            "half_width": false
           }
         }
       },
@@ -27,10 +29,149 @@
         "message"
       ],
       "settings": {
+        "show_page_title": true,
+        "use_columns": true,
+        "contact_title": "Contact us",
+        "contact_text": ""
+      }
+    },
+    "1f7330ba-95ad-4131-9059-353c3467ece3": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Contact_Header_Header.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 300,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "Contact Us",
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "full"
+      }
+    },
+    "7117dda7-8be8-4e0d-90c3-5853538f1d26": {
+      "type": "contact-form",
+      "blocks": {
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-0": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-1": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-2": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-0",
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-1",
+        "template--15727355756714__7117dda7-8be8-4e0d-90c3-5853538f1d26-16663051511aec6dfd-2"
+      ],
+      "settings": {
+        "contact_title": "Contact us",
+        "contact_text": "<p>Use this form to get in touch with us. We'll get back to you as soon as possib.e <\/p>"
+      }
+    },
+    "153edeff-69f9-4ef6-9e6f-506c17c633f9": {
+      "type": "image-with-text",
+      "settings": {
+        "image_width": 700,
+        "subheading": "",
+        "title": "Image with text",
+        "use_h1": false,
+        "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
+        "button_label": "Read more",
+        "button_link": "",
+        "button_style": "primary",
+        "image_position": "left",
+        "text_alignment": "left",
+        "use_alt_bg": false
+      }
+    },
+    "0492c1f3-320c-48ec-8358-cb122451c3d8": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15727355756714__0492c1f3-320c-48ec-8358-cb122451c3d8-16663053000c5bbc83-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text",
+            "use_h1": false
+          }
+        },
+        "template--15727355756714__0492c1f3-320c-48ec-8358-cb122451c3d8-16663053000c5bbc83-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15727355756714__0492c1f3-320c-48ec-8358-cb122451c3d8-16663053000c5bbc83-0",
+        "template--15727355756714__0492c1f3-320c-48ec-8358-cb122451c3d8-16663053000c5bbc83-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
+    },
+    "c9c9e791-d373-4bcc-84be-f7714e1d37f8": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "template--15727355756714__c9c9e791-d373-4bcc-84be-f7714e1d37f8-1666305266b50d9c6b-0": {
+          "type": "question",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Answer<\/p>"
+          }
+        },
+        "template--15727355756714__c9c9e791-d373-4bcc-84be-f7714e1d37f8-1666305266b50d9c6b-1": {
+          "type": "question",
+          "settings": {
+            "title": "Question",
+            "answer": "<p>Answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15727355756714__c9c9e791-d373-4bcc-84be-f7714e1d37f8-1666305266b50d9c6b-0",
+        "template--15727355756714__c9c9e791-d373-4bcc-84be-f7714e1d37f8-1666305266b50d9c6b-1"
+      ],
+      "settings": {
+        "title": "Collapsible tabs"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1f7330ba-95ad-4131-9059-353c3467ece3",
+    "7117dda7-8be8-4e0d-90c3-5853538f1d26",
+    "153edeff-69f9-4ef6-9e6f-506c17c633f9",
+    "0492c1f3-320c-48ec-8358-cb122451c3d8",
+    "c9c9e791-d373-4bcc-84be-f7714e1d37f8"
   ]
 }
