@@ -24,6 +24,7 @@
     },
     "1663880803e421d39a": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "collection": "all-tools",
@@ -38,7 +39,6 @@
     },
     "main": {
       "type": "main-list-collections",
-      "disabled": true,
       "blocks": {
         "364f7af7-ab81-4e22-bc04-50f37e77cc0b": {
           "type": "image",
@@ -75,7 +75,7 @@
       "settings": {
         "title": "Our collections",
         "display_type": "selected",
-        "grid": 2
+        "grid": 4
       }
     }
   },

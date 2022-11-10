@@ -16,7 +16,7 @@
             "title_size_mobile": 58,
             "use_h1": false,
             "text": "<p><strong>U-Joints your thing?<\/strong> Service virtually any u-joint with ease and efficiency with this popular combo-kit.<\/p>",
-            "enlarge_text": true,
+            "enlarge_text": false,
             "button_label_1": "See This Tool",
             "button_url_1": "#",
             "button_label_2": "",
@@ -37,7 +37,7 @@
             "title_size_mobile": 70,
             "use_h1": false,
             "text": "<p><strong>Remove King Pins in minutes. <\/strong><br\/>Not hours.<\/p>",
-            "enlarge_text": true,
+            "enlarge_text": false,
             "button_label_1": "Learn More",
             "button_url_1": "",
             "button_label_2": "",
@@ -136,7 +136,7 @@
         "height": "large",
         "text_alignment": "center",
         "full_width": false,
-        "use_alt_bg": false
+        "use_alt_bg": true
       }
     },
     "16359278676808bea5": {

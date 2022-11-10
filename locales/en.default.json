@@ -158,7 +158,7 @@
       },
       "description": "Description",
       "vendor": "By",
-      "sku": "SKU:",
+      "sku": "SKU",
       "quantity": "Quantity",
       "product_unavailable": "This product is unavailable",
       "backorder": "is backordered and will ship as soon as it is back in stock.",
