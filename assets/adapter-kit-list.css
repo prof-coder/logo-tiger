@@ -1,11 +1,10 @@
 .adapter-list {
-  max-height: 400px;
+  max-height: 750px;
   overflow: auto;
 }
 
 .adapter-item {
   display: flex;
-  align-items: center;
   padding: 10px 15px;
   background: #ebebeb;
 }
@@ -126,7 +125,7 @@
 
 .adapter-item__form .adapter-item__add svg {
   display: block;
-  width: 24px;
+  width: 20px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -225,8 +224,34 @@
 
 .shadow--bottom {
   bottom: 0;
+  opacity: 0.5;
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
+}
+
+@media (max-width: 767px) {
+  .template-suffix-spare-parts .product-detail .gallery {
+    position: sticky;
+    top: 45px;
+    z-index: 100;
+  }
+
+  .template-suffix-spare-parts .product-detail .gallery .main-image {
+    padding: 16px;
+  }
+
+  .template-suffix-spare-parts.scrolled .product-detail .gallery .main-image {
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #a9a9a9;
+  }
+
+  .template-suffix-spare-parts .adapter-list {
+    max-height: none;
+  }
+
+  .template-suffix-spare-parts .adapter-shadow-scroll .shadow {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -251,12 +276,14 @@
   .adapter-item__form .adapter-item__add {
     margin-top: 10px;
     height: auto;
-    padding: 0;
+    padding: 10px 0;
+    border-radius: 0;
   }
 
   .adapter-dropdown .adapter-item__form .adapter-item__add {
     margin-top: 0;
     height: 40px;
+    padding: 0;
   }
 
   .adapter-dropdown .adapter-item__form .adapter-item__add svg {

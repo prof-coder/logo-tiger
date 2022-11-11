@@ -17,63 +17,65 @@
     <div id="adapter-popup" class="adapter-popup js-adapter-popup">
       <div class="adapter-popup__bg js-adapter-popup-trigger"></div>
       <div class="adapter-popup__inner">
-        <div class="adapter-popup__close js-adapter-popup-trigger">{% render 'svg-x-thin' %}</div>
+        <div class="adapter-popup__inner--content">
+          <div class="adapter-popup__close js-adapter-popup-trigger">{% render 'svg-x-thin' %}</div>
 
-        <div class="adapter-popup__step js-adapter-popup-step active"
-          data-step="init"
-        >
-          <div class="adapter-popup__heading">
-            <h3 class="adapter-popup__title">{{ settings.popup-title | newline_to_br }}</h3>
-            <div class="adapter-popup__body">{{ settings.popup-subtitle }}</div>
-          </div>
+          <div class="adapter-popup__step js-adapter-popup-step active"
+            data-step="init"
+          >
+            <div class="adapter-popup__heading">
+              <h3 class="adapter-popup__title">{{ settings.popup-title | newline_to_br }}</h3>
+              <div class="adapter-popup__body">{{ settings.popup-subtitle }}</div>
+            </div>
 
-          <div class="adapter-popup__content">
-            <input id="search-input" class="adapter-popup__search-input js-adapter-popup-search" type="text">
-            <div class="adapter-popup__desc">{{ settings.popup-disclaimer }}</div>
-          </div>
+            <div class="adapter-popup__content">
+              <input id="search-input" class="adapter-popup__search-input js-adapter-popup-search" type="text">
+              <div class="adapter-popup__desc">{{ settings.popup-disclaimer }}</div>
+            </div>
 
-          <div class="adapter-popup__actions">
-            <button class="button adapter-popup__btn-submit js-adapter-popup-search-trigger"
-              data-product=""
-            >submit</button>
-          </div>
-        </div>
-
-        <div class="adapter-popup__step js-adapter-popup-step"
-          data-step="result"
-        >
-          <div class="adapter-popup__heading">
-            <h3 class="adapter-popup__title">{{ settings.popup-success-title }}</h3>
-            <div class="adapter-popup__body">{{ settings.popup-success-subtitle }}</div>
-          </div>
-          <div class="adapter-popup__product js-adapter-popup-product"></div>
-          <form class="js-adapter-popup-form">
             <div class="adapter-popup__actions">
-              <button type="button" class="button adapter-popup__reset js-adapter-popup-step-reset">{% render 'icon-left' %}</button>
-              <button type="submit"
-                class="button adapter-popup__add js-adapter-popup-add"
-              >{%- render 'svg-basket' -%}</button>
+              <button class="button adapter-popup__btn-submit js-adapter-popup-search-trigger"
+                data-product=""
+              >submit</button>
             </div>
-          </form>
-        </div>
+          </div>
 
-        <div class="adapter-popup__step js-adapter-popup-step"
-          data-step="no-result"
-        >
-          <div class="adapter-popup__heading">
-            <h3 class="adapter-popup__title">{{ settings.popup-fail-title | newline_to_br }}</h3>
-          </div>
-          <div class="adapter-popup__content adapter-popup__content--failed">
-            <div class="adapter-popup__failed_title">
-              {{ settings.popup-fail-content-title }}
+          <div class="adapter-popup__step js-adapter-popup-step"
+            data-step="result"
+          >
+            <div class="adapter-popup__heading">
+              <h3 class="adapter-popup__title">{{ settings.popup-success-title }}</h3>
+              <div class="adapter-popup__body">{{ settings.popup-success-subtitle }}</div>
             </div>
-            <div class="adapter-popup__failed_body">
-              {{ settings.popup-fail-content-body }}
-            </div>
+            <div class="adapter-popup__product js-adapter-popup-product"></div>
+            <form class="js-adapter-popup-form">
+              <div class="adapter-popup__actions">
+                <button type="button" class="button adapter-popup__reset js-adapter-popup-step-reset">{% render 'icon-left' %}</button>
+                <button type="submit"
+                  class="button adapter-popup__add js-adapter-popup-add"
+                >{%- render 'svg-basket' -%}</button>
+              </div>
+            </form>
           </div>
-          <div class="adapter-popup__actions">
-            <button class="button adapter-popup__reset js-adapter-popup-step-reset"
-            >{% render 'icon-left' %}</button>
+
+          <div class="adapter-popup__step js-adapter-popup-step"
+            data-step="no-result"
+          >
+            <div class="adapter-popup__heading">
+              <h3 class="adapter-popup__title">{{ settings.popup-fail-title | newline_to_br }}</h3>
+            </div>
+            <div class="adapter-popup__content adapter-popup__content--failed">
+              <div class="adapter-popup__failed_title">
+                {{ settings.popup-fail-content-title }}
+              </div>
+              <div class="adapter-popup__failed_body">
+                {{ settings.popup-fail-content-body }}
+              </div>
+            </div>
+            <div class="adapter-popup__actions">
+              <button class="button adapter-popup__reset js-adapter-popup-step-reset"
+              >{% render 'icon-left' %}</button>
+            </div>
           </div>
         </div>
       </div>
@@ -103,7 +105,7 @@
       };
 
       if (bushing_ids[0]) object.bushingId = object.bushingId + '||' + bushing_ids.join('||') + '||';
-
+      object.bushingId = object.bushingId.toLowerCase();
       BUSHING_PRODUCTS.push(object);
     {%- endfor -%}
 
@@ -248,6 +250,8 @@
 
     function onPopupSearch (searchInput) {
       const searchValue = searchInput.value.replace(/-/g,'').replace(/ /g,'').toLowerCase() + '||';
+      console.log('searchValue -->')
+      console.log(searchValue)
       const matchedBushing = BUSHING_PRODUCTS.find((item) => item.bushingId.indexOf(searchValue) != -1);
 
       if (matchedBushing) {

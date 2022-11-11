@@ -11,7 +11,7 @@
               <div class="adapter-item__row">
                 <div class="adapter-item__title">
                   <div class="adapter-item__sub-note">Part Number</div>
-                  <div class="adapter-item__sub-value">{{ product_item.title | split: '|' | first }}</div>
+                  <div class="adapter-item__sub-value">{{ first_variant_item.sku }}</div>
                 </div>
                 <div class="adapter-item__number">
                   <div class="adapter-item__sub-note">Number Required</div>
@@ -25,7 +25,7 @@
               <div class="adapter-item__row">
                 <div class="adapter-item__description">
                   <div class="adapter-item__sub-note">Description</div>
-                  <div class="adapter-item__sub-detail">Forcing screw or what have you.</div>
+                  <div class="adapter-item__sub-detail">{{ product_item.metafields.custom.short_description | default: 'Forcing screw or what have you.' }}</div>
                 </div>
               </div>
             </div>

@@ -25,6 +25,10 @@ function addItemToCart(form) {
     })
 }
 
+function getScrollPos () {
+  return document.documentElement.scrollTop || document.body.scrollTop;
+}
+
 function bindUIEvents () {
 	const forms = document.querySelectorAll('.js-adapter-form');
   forms.forEach((form) => {
@@ -69,10 +73,24 @@ function bindUIEvents () {
   		contentScrollHeight = content.scrollHeight - wrapper.offsetHeight;
 
 		  var currentScroll = content.scrollTop / contentScrollHeight;
-		  if (currentScroll < 0.3) currentScroll = 0.3
+		  if (currentScroll < 0) currentScroll = 0
 		  shadowTop.style.opacity = currentScroll;
+      if (currentScroll < 0.5) currentScroll = 0.5
 		  shadowBottom.style.opacity = 1 - currentScroll;
 		});
+  });
+
+  document.addEventListener('scroll', (e) => {
+    const content = document.querySelector('#content');
+    const body = document.querySelector('body');
+    if (!content) return false;
+    console.log('here')
+    console.log(getScrollPos())
+    if (getScrollPos() > 0) {
+      body.classList.add('scrolled');
+    } else {
+      body.classList.remove('scrolled');
+    }
   })
 }
 
