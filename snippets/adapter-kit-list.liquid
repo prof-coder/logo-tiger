@@ -25,7 +25,7 @@
               <div class="adapter-item__row">
                 <div class="adapter-item__description">
                   <div class="adapter-item__sub-note">Description</div>
-                  <div class="adapter-item__sub-detail">{{ product_item.metafields.custom.short_description | default: 'Forcing screw or what have you.' }}</div>
+                  <div class="adapter-item__sub-detail">{{ product_item.description | strip_html | truncatewords: 35, '' }}</div>
                 </div>
               </div>
             </div>

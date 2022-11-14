@@ -352,7 +352,18 @@
                             {{- 'products.product.add_to_cart' | t -}}
                           {%- endif -%}
                         {%- endcapture -%}
-                        <button class="button button--large" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+                        <button class="button button--large"
+                          type="submit"
+                          data-add-to-cart-text="{{ add_to_cart_text | escape }}"
+                          style="
+                            {% if block.settings.button_bg_color != blank %}
+                              --button-bg-color: {{ block.settings.button_bg_color }};
+                            {% endif %}
+                            {% if block.settings.button_color != blank %}
+                              --button-color: {{ block.settings.button_color }};
+                            {% endif %}
+                          "
+                        >
                           {{- add_to_cart_text -}}
                         </button>
                       </div>
@@ -857,6 +868,13 @@
         "limit": 1,
         "settings": [
           {
+            "type": "color",
+            "id": "button_bg_color",
+            "label": "Background Color",
+            "default": "#c20000",
+            "info": "This changes the color of title and the background of the button."
+          },
+          {
             "type": "textarea",
             "id": "block_title",
             "label": "Title",
@@ -867,6 +885,12 @@
             "id": "button_text",
             "label": "Title",
             "default": "Adapter Kits"
+          },
+          {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Color",
+            "default": "#ffffff"
           }
         ]
       },
@@ -1122,6 +1146,18 @@
         "name": "Buy buttons",
         "limit": 1,
         "settings": [
+          {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Color",
+            "default": "#4d4d4d"
+          },
+          {
+            "type": "color",
+            "id": "button_bg_color",
+            "label": "Button Background Color",
+            "default": "#fcfcfc"
+          },
           {
             "type": "checkbox",
             "id": "show_quantity_selector",

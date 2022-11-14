@@ -8532,6 +8532,9 @@ shopify-payment-terms {
   min-height: 48px;
   box-sizing: border-box;
   width: 100%;
+  background: var(--button-bg-color);
+  color: var(--button-color);
+  border-color: var(--button-color);
 }
 .product-form .quantity-submit-row.has-spb .button svg:not(.feather):not(.cc-select__icon) {
   fill: {{ btn_alt_txt }};
@@ -8552,8 +8555,19 @@ shopify-payment-terms {
     color: {{ btn_alt_bg }};
     border-color: {{ btn_alt_border_hover }};
   }
+
   .product-form .quantity-submit-row.has-spb .button:hover svg:not(.feather):not(.cc-select__icon) {
     fill: {{ btn_alt_bg }};
+  }
+
+  .product-form .quantity-submit-row.has-spb .button:hover {
+    background: var(--button-color);
+    color: var(--button-bg-color);
+    border-color: var(--button-color);
+  }
+
+  .product-form .quantity-submit-row.has-spb .button:hover svg:not(.feather):not(.cc-select__icon) {
+    fill: var(--button-bg-color);
   }
 }
 .product-form .quantity-submit-row.has-spb .shopify-payment-button__button {

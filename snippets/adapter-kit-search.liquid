@@ -2,11 +2,23 @@
   <div id="adapter-popup-wrapper" class="adapter-popup-wrapper js-adapter-popup-wrapper {% unless product.first_available_variant.metafields.arena.show-popup == 'true' %}hide-dropdown{% endunless %}">
     <div class="adapter-wrapper__inner">
       <div class="adapter-wrapper__content">
-        <div class="adapter-wrapper__title">
+        <div class="adapter-wrapper__title"
+          {% if mod_settings.button_bg_color != blank %}
+            style="color: {{ mod_settings.button_bg_color }};"
+          {% endif %}
+        >
           {{ mod_settings.block_title }}
         </div>
         <button class="button adapter-wrapper__button js-adapter-popup-trigger"
           data-mod="open"
+            style="
+            {% if mod_settings.button_bg_color != blank %}
+              background-color: {{ mod_settings.button_bg_color }};
+            {% endif %}
+            {% if mod_settings.button_color != blank %}
+              color: {{ mod_settings.button_color }};
+            {% endif %}
+            "
         >
           <span class="plus">+</span>
           {{ mod_settings.button_text }}
