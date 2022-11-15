@@ -47,6 +47,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "button_color": "#4d4d4d",
+            "button_bg_color": "#fcfcfc",
             "show_quantity_selector": true,
             "enable_payment_button": true,
             "show_backorder_text": false,
@@ -56,8 +58,10 @@
         "27865c54-b28e-40f9-9e16-b34cc0f5a254": {
           "type": "adapter_kit",
           "settings": {
+            "button_bg_color": "#c20000",
             "block_title": "This kit doesn’t include any necessary Adapters required to operate.",
-            "button_text": "Adapter Kits"
+            "button_text": "Adapter Kits",
+            "button_color": "#ffffff"
           }
         },
         "description": {
@@ -71,29 +75,8 @@
         },
         "8ee0d56e-845e-4255-96ed-5dffc797b262": {
           "type": "divider",
+          "disabled": true,
           "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329": {
-          "type": "link",
-          "settings": {
-            "url": "{{ product.metafields.custom.instructions_url.value }}",
-            "open_in_new_tab": true,
-            "chevron": false,
-            "text": "Instructions",
-            "style": "secondary",
-            "show_in_quickbuy": false
-          }
-        },
-        "672e9b2f-96d6-426e-a69d-eed15f90a7ee": {
-          "type": "link",
-          "settings": {
-            "url": "{{ product.metafields.custom.spare_parts_url.value }}",
-            "open_in_new_tab": true,
-            "chevron": false,
-            "text": "Spare Parts",
-            "style": "primary",
             "show_in_quickbuy": false
           }
         },
@@ -140,6 +123,28 @@
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329": {
+          "type": "link",
+          "settings": {
+            "url": "{{ product.metafields.custom.instructions_url.value }}",
+            "open_in_new_tab": true,
+            "chevron": false,
+            "text": "Instructions",
+            "style": "secondary",
+            "show_in_quickbuy": false
+          }
+        },
+        "2edcdda1-7266-484d-9ee9-f90ca443573f": {
+          "type": "sparePartsBack",
+          "settings": {
+            "url": "{{ product.metafields.custom.spare_parts_button.value }}",
+            "open_in_new_tab": true,
+            "chevron": false,
+            "text": "Spare Parts",
+            "style": "primary",
+            "show_in_quickbuy": false
+          }
         }
       },
       "block_order": [
@@ -153,12 +158,12 @@
         "27865c54-b28e-40f9-9e16-b34cc0f5a254",
         "description",
         "8ee0d56e-845e-4255-96ed-5dffc797b262",
-        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",
-        "672e9b2f-96d6-426e-a69d-eed15f90a7ee",
         "b6d42500-81ec-42b4-a65f-e2aeec1195da",
         "4ff2695e-2331-4163-bf02-b005628a558e",
         "1027b487-b686-426a-93bb-7b5dcf10066c",
-        "1c391125-a8e4-49ae-9805-2eb5746909d4"
+        "1c391125-a8e4-49ae-9805-2eb5746909d4",
+        "d8800990-0fd2-4ffa-a3f1-9ae4a5f88329",
+        "2edcdda1-7266-484d-9ee9-f90ca443573f"
       ],
       "settings": {
         "show_breadcrumbs": false,

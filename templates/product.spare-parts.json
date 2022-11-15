@@ -5,7 +5,19 @@
       "blocks": {
         "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69": {
           "type": "sku",
+          "disabled": true,
           "settings": {
+          }
+        },
+        "7c689980-71b4-4b90-b5dd-57316641f257": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><strong>Spare Parts<\/strong><\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
           }
         },
         "title": {
@@ -13,8 +25,8 @@
           "settings": {
           }
         },
-        "bd5fad66-ab05-425b-82ea-14b6a7451123": {
-          "type": "link",
+        "c1cef353-80c2-4ee4-be33-a2dc4fd1ee09": {
+          "type": "sparePartsBack",
           "settings": {
             "url": "{{ product.metafields.custom.spare_parts_back_button.value }}",
             "open_in_new_tab": false,
@@ -42,15 +54,18 @@
         "d71f47b6-1371-4f06-b698-64a29ee6984d": {
           "type": "adapter_kit",
           "settings": {
+            "button_bg_color": "#c20000",
             "block_title": "This kit doesn’t include any necessary Adapters required to operate.",
-            "button_text": "Adapter Kits"
+            "button_text": "Adapter Kits",
+            "button_color": "#ffffff"
           }
         }
       },
       "block_order": [
         "0e84f7cf-9ac9-4be6-a5ef-4f61a5f0dc69",
+        "7c689980-71b4-4b90-b5dd-57316641f257",
         "title",
-        "bd5fad66-ab05-425b-82ea-14b6a7451123",
+        "c1cef353-80c2-4ee4-be33-a2dc4fd1ee09",
         "description",
         "divider",
         "d71f47b6-1371-4f06-b698-64a29ee6984d"

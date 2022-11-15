@@ -546,6 +546,12 @@
                   <a class="{% if block.settings.style != 'link' %}btn btn--{{ block.settings.style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.url }}"{% if block.settings.open_in_new_tab %} target="_blank"{% endif %}>{% if block.settings.chevron %}{% render 'svg-chevron-left' %}{%  endif %} {{ block.settings.text | escape }}</a>
                 </div>
               {% endif %}
+            {% when 'sparePartsBack' %}
+              {% if block.settings.text != blank or block.settings.chevron == true %}
+                <div class="lightly-spaced-row{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
+                  <a class="{% if block.settings.style != 'link' %}btn btn--{{ block.settings.style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.url }}"{% if block.settings.open_in_new_tab %} target="_blank"{% endif %}>{% if block.settings.chevron %}{% render 'svg-chevron-left' %}{%  endif %} {{ block.settings.text | escape }}</a>
+                </div>
+              {% endif %}
 
             {% when 'image' %}
               {% if block.settings.image != blank %}
@@ -1888,6 +1894,61 @@
         "settings": [
           {
             "type": "url",
+            "id": "url",
+            "label": "Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open link in new tab",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "chevron",
+            "label": "Add Chevron to Button",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Link text"
+          },
+          {
+            "type": "select",
+            "id": "style",
+            "label": "Style",
+            "default": "primary",
+            "options": [
+              {
+                "label": "Button - primary",
+                "value": "primary"
+              },
+              {
+                "label": "Button - secondary",
+                "value": "secondary"
+              },
+              {
+                "label": "Link",
+                "value": "link"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "id": "show_in_quickbuy",
+            "label": "Show in quick buy",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "sparePartsBack",
+        "name": "Spare Parts Back Button",
+        "settings": [
+          {
+            "type": "text",
             "id": "url",
             "label": "Link"
           },
