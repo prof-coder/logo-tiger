@@ -15,7 +15,7 @@
                 </div>
                 <div class="adapter-item__number">
                   <div class="adapter-item__sub-note">Number Required</div>
-                  <div class="adapter-item__sub-value">1</div>
+                  <div class="adapter-item__sub-value">{{ product_item.metafields.custom.adapter_number_required | default: 1 }}</div>
                 </div>
                 <div class="adapter-item__price">
                   <div class="adapter-item__sub-note">Price</div>
